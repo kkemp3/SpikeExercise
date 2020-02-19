@@ -3,20 +3,24 @@
   <v-card
     color="grey lighten-4"
     flat
-    height="200px"
+    height="100px"
     tile
   >
-    <v-toolbar prominent extended>
+    <v-toolbar >
 
-      <v-toolbar-title>Navigation</v-toolbar-title>
+    <div>
 
-      <v-btn>
-        <nuxt-link to="/login">Login</nuxt-link>
+      <v-btn to="/login" nuxt >
+      Login
       </v-btn>
 
-      <v-btn>
-        <nuxt-link to="/about">About Me</nuxt-link>
+      <v-btn to="/about" nuxt >
+      About Me
       </v-btn>
+      <v-btn to="/homepage" nuxt>
+      Home
+      </v-btn>
+    </div>
 
     </v-toolbar>
   </v-card>

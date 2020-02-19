@@ -1,38 +1,29 @@
 <template>
-  <v-form ref="form" v-model="valid" lazy-validation>
-    <v-text-field
-      v-model="username"
-      :rules="usernameRules"
-      label="UserName"
-      required
-    />
+  <v-container>
+    <v-col sm=50>
+      <v-form ref="form" v-model="valid" lazy-validation>
+        <v-text-field
+          id="styled-input"
+          v-model="username"
+          :rules="usernameRules"
+          label="UserName"
+          required
+        />
+        <v-text-field
+          id="styled-input"
+          v-model="password"
+          :rules="passwordRules"
+          label="Password"
+          type="password"
+          required
+        />
 
-    <v-text-field
-      v-model="password"
-      :rules="passwordRules"
-      label="Password"
-      required
-    />
-
-    <!-- <v-select
-      v-model="select"
-      :items="items"
-      :rules="[v => !!v || 'Item is required']"
-      label="Item"
-      required
-    ></v-select>-->
-
-    <!-- <v-checkbox
-      v-model="checkbox"
-      :rules="[v => !!v || 'You must agree to continue!']"
-      label="Do you agree?"
-      required
-    ></v-checkbox>-->
-
-    <v-btn color="success" class="mr-4" @click="submit">
-      Submit
-    </v-btn>
-  </v-form>
+        <v-btn color="grey" class="mr-4" type="submit" @click="submit">
+          Submit
+        </v-btn>
+      </v-form>
+    </v-col>
+  </v-container>
 </template>
 
 <script>
@@ -65,4 +56,7 @@ export default {
 </script>
 
 <style>
+#styled-input {
+    width: 100px;
+}
 </style>
