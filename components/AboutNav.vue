@@ -26,7 +26,9 @@
           :key="item.title"
         >
           <v-list-item-content>
-            <v-btn :to="item.rdir"> {{ item.title }}</v-btn>
+            <v-btn :to="item.rdir">
+              {{ item.title }}
+            </v-btn>
           </v-list-item-content>
         </v-list-item>
       </v-list>

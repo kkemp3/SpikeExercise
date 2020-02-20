@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>All About Me page</h1>
+    <h1>All About Me</h1>
     <AboutNav />
   </div>
 </template>
@@ -15,5 +15,9 @@ export default {
 </script>
 
 <style>
-
+h1 {
+  font-family: sans-serif;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+}
 </style>

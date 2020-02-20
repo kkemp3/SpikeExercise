@@ -4,11 +4,13 @@
       <v-form ref="form" lazy-validation>
         <v-text-field
           v-model="loginInfo.username"
+          :rules="usernameRules"
           label="UserName"
           required
         />
         <v-text-field
           v-model="loginInfo.password"
+          :rules="passwordRules"
           label="Password"
           type="password"
           required
@@ -27,7 +29,6 @@ export default {
   data () {
     return {
       loginInfo: [
-        { id: '123' },
         { username: 'kevin' },
         { password: '123' }
       ]
@@ -40,7 +41,7 @@ export default {
       }
     },
     submit () {
-      this.$axios.get('http://localhost:5000/login', this.loginInfo)
+      this.$axios.post('http://localhost:5000/register', this.loginInfo)
         .then((Response) => {})
         .catch((err) => {
           this.errors.push(err)

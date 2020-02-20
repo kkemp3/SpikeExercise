@@ -16,8 +16,12 @@
             About Me
           </v-btn>
 
-          <v-btn right absolute permanent to="/login" nuxt>
+          <v-btn to="/login" nuxt>
             Login
+          </v-btn>
+
+          <v-btn to="/register" nuxt>
+            register
           </v-btn>
         </div>
       </v-toolbar>

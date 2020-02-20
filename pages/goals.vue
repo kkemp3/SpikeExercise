@@ -1,7 +1,7 @@
 <template>
   <div>
-  <h1>Fun page</h1>
-  <AboutNav />
+    <h1>Fun page</h1>
+    <AboutNav />
   </div>
 </template>
 
