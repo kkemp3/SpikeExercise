@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>All About Me page</h1>
+    <h1>Other page</h1>
     <AboutNav />
   </div>
 </template>
@@ -13,7 +13,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

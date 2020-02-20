@@ -1,33 +1,43 @@
 
 <template>
-  <v-card
-    color="grey lighten-4"
-    flat
-    height="100px"
-    tile
-  >
-    <v-toolbar >
+  <div>
+    <v-card
+      color="grey lighten-4"
+      flat
+      height="100px"
+      tile
+    >
+      <v-toolbar>
+        <div>
+          <v-btn to="/homepage" nuxt>
+            Home
+          </v-btn>
+          <v-btn to="/about" nuxt>
+            About Me
+          </v-btn>
 
-    <div>
-
-      <v-btn to="/login" nuxt >
-      Login
-      </v-btn>
-
-      <v-btn to="/about" nuxt >
-      About Me
-      </v-btn>
-      <v-btn to="/homepage" nuxt>
-      Home
-      </v-btn>
-    </div>
-
-    </v-toolbar>
-  </v-card>
+          <v-btn right absolute permanent to="/login" nuxt>
+            Login
+          </v-btn>
+        </div>
+      </v-toolbar>
+    </v-card>
+  </div>
 </template>
 
 <script>
+
 export default {
-  name: 'AppHeader'
+  name: 'AppHeader',
+  components: {
+
+  },
+  methods: {
+
+  }
 }
 </script>
+
+<style>
+
+</style>
