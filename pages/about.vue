@@ -1,7 +1,18 @@
 <template>
   <div>
     <h1>All About Me</h1>
-    <AboutNav />
+      <table>
+      <tr>
+        <td width="75%" valign="top">
+          <p>
+            I am a 4th year student here at UW-Madison majoring in Computer Science. I like to play and watch hockey, pet dogs, and drink craft beers.
+          </p>
+        </td>
+        <td align="right">
+          <AboutNav />
+        </td>
+      </tr>
+    </table>
   </div>
 </template>
 

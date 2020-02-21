@@ -1,5 +1,5 @@
 <template>
-  <v-card height="350px">
+  <v-card height="350px" width="200px">
     <v-navigation-drawer
       absolute
       permanent

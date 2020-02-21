@@ -1,7 +1,18 @@
 <template>
   <div>
     <h1>Fun page</h1>
-    <AboutNav />
+      <table>
+      <tr>
+        <td width="75%" valign="top">
+          <p>
+            I want to make a zillion dollars.
+          </p>
+        </td>
+        <td align="right">
+          <AboutNav />
+        </td>
+      </tr>
+    </table>
   </div>
 </template>
 

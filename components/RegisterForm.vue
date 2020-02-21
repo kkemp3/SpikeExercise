@@ -3,14 +3,13 @@
     <v-col sm="50">
       <v-form ref="form" lazy-validation>
         <v-text-field
-          v-model="loginInfo.username"
-          :rules="usernameRules"
+          v-model="username"
           label="UserName"
           required
         />
         <v-text-field
-          v-model="loginInfo.password"
-          :rules="passwordRules"
+          v-model="password"
+
           label="Password"
           type="password"
           required
@@ -28,21 +27,19 @@
 export default {
   data () {
     return {
-      loginInfo: [
-        { username: 'kevin' },
-        { password: '123' }
-      ]
+      username: '',
+      password: ''
     }
   },
   methods: {
     head () {
       return {
-        title: 'Spike: Login'
+        title: 'Spike: Register'
       }
     },
     submit () {
-      this.$axios.post('http://localhost:5000/register', this.loginInfo)
-        .then((Response) => {})
+      this.$axios.post('http://localhost:5000/register', { username: this.username, password: this.password })
+        .then((Response) => { console.log(Response) })
         .catch((err) => {
           this.errors.push(err)
         })

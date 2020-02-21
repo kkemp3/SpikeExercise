@@ -3,12 +3,12 @@
     <v-col sm="50">
       <v-form ref="form" lazy-validation>
         <v-text-field
-          v-model="loginInfo.username"
+          v-model="username"
           label="UserName"
           required
         />
         <v-text-field
-          v-model="loginInfo.password"
+          v-model="password"
           label="Password"
           type="password"
           required
@@ -26,11 +26,9 @@
 export default {
   data () {
     return {
-      loginInfo: [
-        { id: '123' },
-        { username: 'kevin' },
-        { password: '123' }
-      ]
+      id: '',
+      username: '',
+      password: ''
     }
   },
   methods: {
@@ -40,12 +38,26 @@ export default {
       }
     },
     submit () {
-      this.$axios.get('http://localhost:5000/login', this.loginInfo)
-        .then((Response) => {})
-        .catch((err) => {
+      this.$axios.post('http://localhost:5000/dologin', { username: this.username, password: this.password })
+        .then((response) => {
+          if (response.message === 'Success!') {
+            this.self.$router.push('http://localhost:3000/homepage')
+          } else {
+            this.self.$router.push('http://localhost:3000/login')
+          }
+        },
+        (err) => {
+          console.log('Login post failed')
           this.errors.push(err)
         })
+    },
+    usernameToId () {
+      this.id = parseInt(this.username)
     }
+    // async asyncData ({ params }) {
+    //   const { data } = await this.$axios.post('http://localhost:5000/login', { username: this.username, password: this.password })
+    //   return { username: data.username }
+    // }
   }
 }
 

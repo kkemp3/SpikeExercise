@@ -1,7 +1,18 @@
 <template>
   <div>
-    <h1>Other page</h1>
-    <AboutNav />
+    <h1>Other Stuff</h1>
+     <table>
+      <tr>
+        <td width="75%" valign="top">
+          <p>
+            Some other stuff.
+          </p>
+        </td>
+        <td align="right">
+          <AboutNav />
+        </td>
+      </tr>
+    </table>
   </div>
 </template>
 
