@@ -39,12 +39,9 @@ export default {
     },
     submit () {
       this.$axios.post('http://localhost:5000/dologin', { username: this.username, password: this.password })
-        .then((response) => {
-          if (response.message === 'Success!') {
-            this.self.$router.push('http://localhost:3000/homepage')
-          } else {
-            this.self.$router.push('http://localhost:3000/login')
-          }
+        .then((Response) => {
+          console.log(Response)
+          this.$router.push('/homepage')
         },
         (err) => {
           console.log('Login post failed')
